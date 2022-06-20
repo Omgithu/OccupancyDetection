@@ -14,7 +14,7 @@ from pyqtgraph.Qt import QtCore, QtGui
 from sklearn.metrics.pairwise import pairwise_distances
 from os import listdir
 import seaborn as sns 
-%matplotlib qt
+# %matplotlib qt
 
 def tlvParsing(data, tlvHeaderLengthInBytes, pointLengthInBytes, targetLengthInBytes):
     
@@ -304,7 +304,8 @@ s1 = p1.plot([], [], pen=None, symbol='o')
 s2 = p2.plot([], [], pen=None, symbolBrush = (119,0,255), symbol='s', symbolSize=20)
 occupancyEstimate = win.addLabel("Occupancy  Estimate:0",row=0,col=1, size='20pt', bold=True, color='FF0000')
 
-parsingMatFile = 'C:\\Users\\hasna\\Documents\\GitHub\\OccupancyDetection\\Data\\Experiment 3\\X2.mat'
+parsingMatFile = '..\\Data\\Experiment 1\\walkingWithHandMotions.mat'
+# parsingMatFile = 'C:\\Users\\hasna\\Documents\\GitHub\\OccupancyDetection\\Data\\Experiment 3\\X2.mat'
 tlvData = (loadmat(parsingMatFile))['tlvStream'][0]
 
 #Initialise Kalman Parameters 
